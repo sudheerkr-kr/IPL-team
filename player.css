@@ -1,0 +1,61 @@
+.player-detail {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.player-box {
+  max-width: 900px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.player-box img {
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.player-box h1 {
+  margin-bottom: 10px;
+}
+
+.role {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.bio {
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stats div span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+section {
+  padding: 90px 80px;
+}
+section h1,
+section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin-top: 10px;
+}

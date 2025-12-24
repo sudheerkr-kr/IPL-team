@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSK Squad 2024</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Squad CSS -->
+  <link rel="stylesheet" href="squad.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="assets/images/csk-logo.png" alt="CSK Logo">
+    <span>CSK FAN HUB</span>
+  </div>
+ 
+  <button class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <nav class="nav-links">
+    <a href="index.html" >Home</a>
+
+    <div class="dropdown active">
+      <span class="dropdown-toggle">Team ▾</span>
+      <div class="dropdown-menu">
+        <a href="squad.html">Squad</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <span class="dropdown-toggle">History ▾</span>
+      <div class="dropdown-menu">
+        <a href="history.html">Overview</a>
+        <a href="seasons.html">Seasons</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="squad-hero" class="about reveal">
+  <h1>CSK Squad 2024</h1>
+  <p>Complete A–Z squad details with roles & nationality</p>
+</section>
+
+
+<div class="search-wrap">
+  <input id="searchInput" placeholder="Search player..." />
+</div>
+
+
+<!-- FILTERS -->
+<section class="filters" class="about reveal">
+  <button data-role="All" class="active">All</button>
+  <button data-role="Batsman">Batsmen</button>
+  <button data-role="Bowler">Bowlers</button>
+  <button data-role="All-Rounder">All-Rounders</button>
+  <button data-role="Wicket-Keeper">Wicket Keepers</button>
+</section>
+<div class="country-filters">
+  <button data-country="All" class="c-active">All</button>
+  <button data-country="India">India</button>
+  <button data-country="Overseas">Overseas</button>
+</div>
+
+
+<!-- PLAYER GRID -->
+<section class="squad-container" class="about reveal">
+  <div id="playerGrid" class="player-grid">
+    <!-- Players injected by JS -->
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2024 CSK Fan Website | Unofficial</p>
+</footer>
+<script src="players-data.js"></script>
+<script src="squad.js"></script>
+</body>
+</html>
+

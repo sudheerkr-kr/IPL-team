@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Player Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="assets/images/csk-logo.png" alt="CSK Logo">
+    <span>CSK FAN HUB</span>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <nav class="nav-links">
+    <a href="index.html" >Home</a>
+
+    <div class="dropdown">
+      <span class="dropdown-toggle">Team ▾</span>
+      <div class="dropdown-menu">
+        <a href="squad.html" class="active">Squad</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <span class="dropdown-toggle">History ▾</span>
+      <div class="dropdown-menu">
+        <a href="history.html">Overview</a>
+        <a href="seasons.html">Seasons</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="player-detail" id="playerDetail" class="about reveal">
+  <!-- Injected by JS -->
+</section>
+
+<script src="players-data.js"></script>
+<script src="player.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.player-card,
+.shop-card,
+.year {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover,
+.shop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+.card,
+.player-card,
+.shop-card,
+.contact-card {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: all 0.35s ease;
+}
+
+.card:hover,
+.player-card:hover,
+.shop-card:hover,
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.25);
+}
+section {
+  padding: 90px 80px;
+}
+section h1,
+section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin-top: 10px;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+

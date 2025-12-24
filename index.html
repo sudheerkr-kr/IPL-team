@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chennai Super Kings | Fan Website</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- ================= PAGE LOADER ================= -->
+<div id="page-loader">
+  <div class="loader-box">
+    <img src="assets/images/csk-logo.png" alt="CSK Logo">
+    <p>Whistle Podu Army...</p>
+  </div>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="assets/images/csk-logo.png" alt="CSK Logo">
+    <span>CSK FAN HUB</span>
+  </div>
+  
+  <button class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+
+    <div class="dropdown">
+      <span class="dropdown-toggle">Team ▾</span>
+      <div class="dropdown-menu">
+        <a href="squad.html">Squad</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <span class="dropdown-toggle">History ▾</span>
+      <div class="dropdown-menu">
+        <a href="history.html">Overview</a>
+        <a href="seasons.html">Seasons</a>
+        <a href="records.html">Records</a>
+      </div>
+    </div>
+
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+<section class="hero reveal">
+  <div class="hero-content">
+    <h1>CHENNAI SUPER KINGS</h1>
+    <p>
+      One of the most successful franchises in Indian Premier League history.  
+      Known for consistency, leadership, loyalty, and an unmatched fanbase.
+    </p>
+    <div class="hero-buttons">
+      <a href="squad.html" class="btn-primary">View Squad 2024</a>
+      <a href="history.html" class="btn-secondary">Explore History</a>
+    </div>
+  </div>
+</section>
+<!-- ================= NEXT MATCH ================= -->
+<section class="next-match">
+  <h2>Next Match</h2>
+
+  <div class="match-card">
+    <h3>
+      Chennai Super Kings
+      <br><span class="vs" style="color: rgb(236, 232, 16);">v/s</span>
+      <br><span style="color: brown;">Royal Challengers Bengaluru</span>
+    </h3>
+
+    <p class="match-meta">
+      22 March 2025 • MA Chidambaram Stadium, Chennai
+    </p>
+
+    <div id="countdown">
+      Match Starts Soon
+    </div>
+
+    <span class="status">UPCOMING</span>
+  </div>
+</section>
+
+
+<!-- ================= FEATURES STRIP ================= -->
+<section class="features reveal">
+  <div>🏆 5× IPL Champions</div>
+  <div>🦁 Most Consistent Team</div>
+  <div>💛 Whistle Podu Army</div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about reveal">
+  <h2>About CSK</h2>
+  <p>
+    Chennai Super Kings (CSK) is a professional franchise cricket team based in Chennai, Tamil Nadu.
+    Founded in 2008, the team has been one of the most consistent performers in the IPL.
+  </p>
+  <p>
+    With a strong core, trust in experienced players, and calm leadership,
+    CSK has qualified for the playoffs in most seasons they have played.
+  </p>
+</section>
+<!-- ================= TEAM STATS ================= -->
+<section class="team-stats">
+  <div class="stat-card">
+    <span class="stat-number" data-count="5">0</span>
+    <p>IPL Titles</p>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-number" data-count="240">0</span>
+    <p>Total Matches</p>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-number" data-count="14500">0</span>
+    <p>Total Runs</p>
+  </div>
+
+  <div class="stat-card">
+    <span class="stat-number" data-count="800">0</span>
+    <p>Total Wickets</p>
+  </div>
+</section>
+
+
+<!-- ================= STATS ================= -->
+<section class="stats reveal">
+  <div class="stat-box">
+    <h3>5</h3>
+    <p>IPL Titles</p>
+  </div>
+  <div class="stat-box">
+    <h3>10+</h3>
+    <p>Playoff Appearances</p>
+  </div>
+  <div class="stat-box">
+    <h3>2008–2024</h3>
+    <p>Years of Legacy</p>
+  </div>
+  <div class="stat-box">
+    <h3>#1</h3>
+    <p>Fan Loyalty</p>
+  </div>
+</section>
+<!-- ================= GALLERY ================= -->
+<section class="gallery-section">
+  <h2>CSK Moments</h2>
+
+  <div class="gallery">
+    <img src="gallery/1.jpg" alt="CSK moment 1" onclick="openModal(this.src)">
+    <img src="gallery/2.jpg" alt="CSK moment 2" onclick="openModal(this.src)">
+    <img src="gallery/3.jpg" alt="CSK moment 3" onclick="openModal(this.src)">
+    <img src="gallery/4.jpg" alt="CSK moment 4" onclick="openModal(this.src)">
+    <img src="gallery/5.jpg" alt="CSK moment 5" onclick="openModal(this.src)">
+    <img src="gallery/6.jpg" alt="CSK moment 6" onclick="openModal(this.src)">
+     <img src="gallery/7.jpg" alt="CSK moment 1" onclick="openModal(this.src)">
+      <img src="gallery/8.jpg" alt="CSK moment 1" onclick="openModal(this.src)">
+  </div>
+</section>
+
+<!-- ================= IMAGE MODAL ================= -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<!-- ================= LEGACY ================= -->
+<section class="legacy reveal">
+  <h2>Legacy of Consistency</h2>
+  <p>
+    CSK is widely respected for backing players long-term instead of frequent changes.
+    This philosophy has created legends and unforgettable moments in IPL history.
+  </p>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta reveal">
+  <h2>Whistle Podu Army</h2>
+  <p>Explore complete squad details, season history, records, and official merchandise.</p>
+  <a href="squad.html" class="btn-primary">Go to Squad Page</a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2024 CSK Fan Website | Fan-made & Unofficial</p>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/chennaiipl/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/ChennaiIPL" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.facebook.com/TheChennaiSuperKings/" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

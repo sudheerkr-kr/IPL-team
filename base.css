@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body{
+  background: linear-gradient(180deg,#f7c600 0%,#fff4bf 60%,#ffffff 100%);
+  color:#111;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .navbar,
+body.dark .footer {
+  background: #000;
+}
+section {
+  padding: 90px 80px;
+}
+section h1,
+section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin-top: 10px;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+body.dark{ background:#111; color:#eee; }
+body.dark .navbar{ background:#000; }
+/* ===== NEXT MATCH SECTION ===== */
+.next-match {
+  text-align: center;
+  margin: 90px 0;
+}
+
+.next-match h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.match-card {
+  display: inline-block;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #f5c518;
+  padding: 28px 36px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.match-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.match-card p {
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+#countdown {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+/* ===== PAGE LOADER ===== */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.loader-box {
+  text-align: center;
+  color: #f5c518;
+}
+
+.loader-box img {
+  width: 120px;
+  margin-bottom: 15px;
+  animation: pulse 1.4s infinite;
+}
+
+.loader-box p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+/* ===== THEME TOGGLE BUTTON ===== */
+#themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: #fff;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background: #000;
+}
+
+body.dark .player-card,
+body.dark .stat-card,
+body.dark .season-table,
+body.dark .match-card {
+  background: #1a1a1a;
+  color: #eee;
+}
+
+/* ===== CSK YELLOW MODE ===== */
+body.yellow {
+  background: #fff8d6;
+  color: #111;
+}
+
+body.yellow .navbar {
+  background: #f5c518;
+  color: #000;
+}
+
+body.yellow .nav-links a,
+body.yellow .dropdown > span {
+  color: #000;
+}
+
+body.yellow .player-card,
+body.yellow .stat-card,
+body.yellow .season-table,
+body.yellow .match-card {
+  background: #ffffff;
+}
+:focus {
+  outline: 3px solid #f5c518;
+  outline-offset: 3px;
+}
+html {
+  scroll-behavior: smooth;
+}
+button,
+a {
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:active,
+a:active {
+  transform: scale(0.97);
+}
+/* ===== FIXED NAVBAR BASE ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 78px;              /* 🔒 FIXED HEIGHT */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;           /* vertical padding hata di */
+  background: linear-gradient(90deg, #f5c518, #ffdd44);
+  z-index: 1000;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.nav-left img {
+  height: 48px;
+  width: auto;
+}
+
+.nav-left span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #000;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+
+.nav-links a,
+.dropdown > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;              /* navbar ke neeche */
+  left: 0;
+  /* background: #000; */
+  min-width: 170px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu a {
+  padding: 12px 16px;
+  display: block;
+  color: #f5c518;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background: #f5c518;
+  color: #000;
+}
+/* .nav-links a.active::after,
+.dropdown-menu a.active::after {
+  content: "";
+  position: absolute;
+ 
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #000;
+} */
+/* ===== ACTIVE NAV LINK (FINAL FIX) ===== */
+
+.nav-links a {
+  position: relative;
+}
+
+/* active page underline */
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;          /* 👈 text ke niche */
+  width: 100%;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+.next-match {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.match-card {
+  max-width: 520px;
+  margin: auto;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  animation: float 3s ease-in-out infinite;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.match-info {
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.match-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #000;
+  color: #f5c518;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+/* ===== GLOBAL RESPONSIVE RESET ===== */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .nav-left {
+    gap: 10px;
+  }
+
+  .nav-left img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-left span {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a,
+  .dropdown > span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px;
+    background-position: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .match-card {
+    padding: 26px 22px;
+    border-radius: 16px;
+  }
+
+  .match-card h3 {
+    font-size: 18px;
+  }
+
+  #countdown {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #playerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .player-card img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #playerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 24px 20px;
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+/* ===== MOBILE NAVBAR SIMPLE FIX ===== */
+
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: #f5c518;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #000;
+    padding: 10px 0;
+    font-weight: 700;
+  }
+}
+/* ===== EMERGENCY NAVBAR FIX ===== */
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+
+#page-loader {
+  display: none !important;
+}

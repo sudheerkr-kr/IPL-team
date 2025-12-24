@@ -1,0 +1,44 @@
+.page-hero {
+  padding: 80px 20px;
+  background: #000;
+  color: #f5c518;
+  text-align: center;
+}
+
+.timeline {
+  padding: 60px 80px;
+  background: #fff;
+}
+
+.year {
+  padding: 25px;
+  border-left: 4px solid #000;
+  margin-bottom: 25px;
+}
+
+.year h2 {
+  margin-bottom: 10px;
+}
+
+.year.champion {
+  background: #f5c518;
+  border-left: 6px solid #000;
+}
+section {
+  padding: 90px 80px;
+}
+section h1,
+section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin-top: 10px;
+}
